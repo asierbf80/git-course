@@ -110,3 +110,23 @@ que te permite explicar todo. Para escribir en el README se utiliza markdown.
 
 Como ya está en github, podemos eliminarlo de nuestro ordenador y posteriormente si queremos volver a hacer uso de este código,
 podemos clonarlo, descargandolo con un zip. O mediante este comando (git clone <link>)
+
+--------------------------------------------------------------------------------------------------------------------------------
+Después de dos años sin literalmente haber actualizado nada de esto. Me digno a escribir para ayudar en el tema de git ya que me he encontrado con varias cosas debido al tener más de una cuenta de github por tema universidad. 
+
+[Git tiene 3 niveles de configuración:] 
+  · Local: Afecta solo al repositorio actual y se almacena en .git/config dentro del directorio del repositorio. 
+    Accediendo para verificar su configuración sería tal que: (git config --local --list) o incluso sin escribir local. 
+
+  · Global: Afecta a todos los repositorios de tu usuario y se almacena en ~/.gitconfig. 
+    Para verificar su configuración: (git config --global --list).
+
+  · Sistema: Afecta a todos los usuarios y se almacena en el directorio de instalación de Git. 
+    Para verificar su configuración: (git config --system --list).
+
+[credential.helper:]
+Eso es la manera en como se almacenan y se gestionan las credenciales de Git en tu sistema. 
+  · (osxkeychain): Este metodo utiliza el llavero de macOS (keychain) para almacenar las credenciales de manera segura. Al hacer un push o un pull, Git buscará automáticamente las credenciales almacenadas en el llavero. Si las credenciales están allí, Git las utilizará sin pedirte que las ingreses nuevamente. 
+
+  · (store): Este método almacena las credenciales en un archivo de texto plano en el disco, por defecto "~/.git-credentials". Por lo que no están cifradas y pueden ser leídas fácilmente por cualquier persona que tenga acceso a tu archivo del sistema. 
+
